@@ -1,0 +1,62 @@
+/* Flashcard.css */
+
+.flashcard-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .flashcard {
+    width: 300px;
+    height: 200px;
+    perspective: 1000px;
+    cursor: pointer;
+    margin: 20px 0;
+  }
+  
+  .flashcard .front, .flashcard .back {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    backface-visibility: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #fff;
+    border: 1px solid #ddd;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    padding: 20px;
+    font-size: 1.2rem;
+  }
+  
+  .flashcard .back {
+    transform: rotateY(180deg);
+  }
+  
+  .flashcard.flipped .front {
+    transform: rotateY(180deg);
+  }
+  
+  .flashcard.flipped .back {
+    transform: rotateY(360deg);
+  }
+  
+  .navigation {
+    margin-top: 20px;
+  }
+  
+  .navigation button {
+    padding: 10px 20px;
+    margin: 0 10px;
+    cursor: pointer;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+  }
+  
+  .navigation button:hover {
+    background-color: #0056b3;
+  }
+  
